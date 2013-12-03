@@ -1,0 +1,16 @@
+{
+  "name":        "bitcoin-notifier",
+  "version":     "1.0.0",
+  "author":      "Rafael Corral",
+  "description": "",
+  "licenses":     [{
+    "type":       "MIT",
+    "url":        "http://opensource.org/licenses/MIT"
+  }],
+
+  "dependencies": {
+    "forever": "x",
+    "nodemailer": "x"
+  }
+}
+

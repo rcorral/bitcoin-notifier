@@ -1,0 +1,25 @@
+var nodemailer = require('nodemailer'),
+	user = 'USERNAME@SOMEWHERE.CAM'
+	;
+
+// create reusable transport method (opens pool of SMTP connections)
+var transport = nodemailer.createTransport('SMTP',{
+    host: 'smtp.mandrillapp.com',
+   	port: 587,
+   	secureConnection: false,
+    auth: {
+        user: user,
+        pass: 'PASSWORD'
+    }
+});
+
+exports.get = function() {
+	return transport;
+}
+
+exports.get_mail_stuff = function() {
+	return {
+		from: user,
+		to: 'MYNUMBER@txt.att.net'
+	};
+}
